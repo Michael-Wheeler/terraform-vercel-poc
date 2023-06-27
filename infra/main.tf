@@ -21,7 +21,14 @@ resource "vercel_project" "infra_test" {
   }
 }
 
-resource "vercel_deployment" "infra_test" {
-  project_id = vercel_project.infra_test.id
-  ref        = "nonprod"
-}
+# resource "vercel_deployment" "prod" {
+#   project_id = vercel_project.infra_test.id
+#   ref        = "main"
+#   production = true
+# }
+
+# resource "vercel_deployment" "nonprod" {
+#   project_id = vercel_project.infra_test.id
+#   ref        = "nonprod"
+#   production = false
+# }
